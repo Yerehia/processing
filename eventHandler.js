@@ -1,6 +1,6 @@
 function assignEvent(p5Element, eventType, eventFunction) {
     switch (eventType) {
-        case 'CLICK':
+        case 'MOUSE_CLICK':
             p5Element.mouseClicked(() => { eventFunction(); });
             break;
         case 'DOUBLE_CLICKED':
@@ -12,10 +12,10 @@ function assignEvent(p5Element, eventType, eventFunction) {
         case 'DRAGGED':
             p5Element.mouseDragged(() => { eventFunction(); });
             break;
-        case 'PRESSED':
+        case 'MOUSE_PRESSED':
             p5Element.mousePressed(() => { eventFunction(); });
             break;
-        case 'RELEASED':
+        case 'MOUSE_RELEASED':
             p5Element.mouseReleased(() => { eventFunction(); });
             break;
         case 'SCROLLED':
