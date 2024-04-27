@@ -1,34 +1,34 @@
-function assignEvent(p5Element, eventType, eventFunction) {
+function assignEvent(p5Element, eventType, newScript, customJS) {
     switch (eventType) {
         case 'MOUSE_CLICK':
-            p5Element.mouseClicked(() => { eventFunction(); });
+            p5Element.mouseClicked(() => { sendEvent(newScript, customJS); });
             break;
         case 'DOUBLE_CLICKED':
-            p5Element.doubleClicked(() => { eventFunction(); });
+            p5Element.doubleClicked(() => { sendEvent(newScript, customJS); });
             break;
         case 'MOVED':
-            p5Element.mouseMoved(() => { eventFunction(); });
+            p5Element.mouseMoved(() => { sendEvent(newScript, customJS); });
             break;
         case 'DRAGGED':
-            p5Element.mouseDragged(() => { eventFunction(); });
+            p5Element.mouseDragged(() => { sendEvent(newScript, customJS); });
             break;
         case 'MOUSE_PRESSED':
-            p5Element.mousePressed(() => { eventFunction(); });
+            p5Element.mousePressed(() => { sendEvent(newScript, customJS); });
             break;
         case 'MOUSE_RELEASED':
-            p5Element.mouseReleased(() => { eventFunction(); });
+            p5Element.mouseReleased(() => { sendEvent(newScript, customJS); });
             break;
         case 'SCROLLED':
-            p5Element.mouseWheel(() => { eventFunction(); });
+            p5Element.mouseWheel(() => { sendEvent(newScript, customJS); });
             break;
         case 'KEY_PRESSED':
-            p5Element.keyPressed(() => { eventFunction(); });
+            p5Element.keyPressed(() => { sendEvent(newScript, customJS); });
             break;
         case 'KEY_RELEASED':
-            p5Element.keyReleased(() => { eventFunction(); });
+            p5Element.keyReleased(() => { sendEvent(newScript, customJS); });
             break;
         case 'KEY_TYPED':
-            p5Element.keyTyped(() => { eventFunction(); });
+            p5Element.keyTyped(() => { sendEvent(newScript, customJS); });
             break;
         default:
             console.error("Tipo de evento no reconocido");
