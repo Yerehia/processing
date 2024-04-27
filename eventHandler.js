@@ -1,5 +1,4 @@
 function assignEvent(p5Element, eventType, newScript, customJS) {
-    console.log(newScript);
     switch (eventType) {
         case 'MOUSE_CLICK':
             p5Element.mouseClicked(() => { sendEvent(newScript, customJS); });
@@ -55,7 +54,7 @@ function sendEvent(newScript, customJS) {
         console.error('La solicitud falló');
     };
     console.log(newScript);
-    xhr.send("newScriptContent=".concat(newScript));
+    xhr.send("newScriptContent=" + encodeURIComponent(JSON.stringify(newScript)));
 
     eval(customJS)
 }
