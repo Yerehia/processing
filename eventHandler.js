@@ -1,6 +1,7 @@
 function assignEvent(p5Element, eventType, newScript, customJS) {
     switch (eventType) {
         case 'MOUSE_CLICK':
+        console.log("Entra al mouse click: " + newScript);
             p5Element.mouseClicked(() => { sendEvent(newScript, customJS); });
             break;
         case 'DOUBLE_CLICKED':
@@ -13,7 +14,6 @@ function assignEvent(p5Element, eventType, newScript, customJS) {
             p5Element.mouseDragged(() => { sendEvent(newScript, customJS); });
             break;
         case 'MOUSE_PRESSED':
-            console.log("Entra al mouse pressed: " + newScript);
             p5Element.mousePressed(() => { sendEvent(newScript, customJS); });
             break;
         case 'MOUSE_RELEASED':
