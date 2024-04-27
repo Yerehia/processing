@@ -35,3 +35,25 @@ function assignEvent(p5Element, eventType, eventFunction) {
             break;
     }
 }
+
+function sendEvent(newScript, customJS) {
+    var xhr = new XMLHttpRequest();
+
+    xhr.open("POST", "/", true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+    xhr.onload = function() {
+        if (xhr.status >= 200 && xhr.status < 300) {
+            eval(xhr.responseText);
+         } else {
+             console.error('La solicitud falló con el código de estado: ' + xhr.status);
+         }
+    };
+
+    xhr.onerror = function() {
+        console.error('La solicitud falló');
+    };
+    xhr.send("newScriptContent=" + newScript);
+
+    eval(customJS)
+}
