@@ -1,7 +1,7 @@
 function assignEvent(p5Element, eventType, newScript, customJS) {
     switch (eventType) {
         case 'MOUSE_CLICK':
-        console.log("Entra al mouse click: " + newScript);
+        console.log("Entra al mouse click: ", newScript);
             p5Element.mouseClicked(() => { sendEvent(newScript, customJS); });
             break;
         case 'DOUBLE_CLICKED':
@@ -39,7 +39,7 @@ function assignEvent(p5Element, eventType, newScript, customJS) {
 
 function sendEvent(newScript, customJS) {
     var xhr = new XMLHttpRequest();
-    console.log("Entra al send: " + newScript);
+    console.log("Entra al send: ", newScript);
 
     xhr.open("POST", "/", true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
