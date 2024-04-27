@@ -13,6 +13,7 @@ function assignEvent(p5Element, eventType, newScript, customJS) {
             p5Element.mouseDragged(() => { sendEvent(newScript, customJS); });
             break;
         case 'MOUSE_PRESSED':
+            console.log("Entra al mouse pressed: " + newScript);
             p5Element.mousePressed(() => { sendEvent(newScript, customJS); });
             break;
         case 'MOUSE_RELEASED':
@@ -38,6 +39,7 @@ function assignEvent(p5Element, eventType, newScript, customJS) {
 
 function sendEvent(newScript, customJS) {
     var xhr = new XMLHttpRequest();
+    console.log("Entra al send: " + newScript);
 
     xhr.open("POST", "/", true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
