@@ -53,7 +53,8 @@ function sendEvent(newScript, customJS) {
     xhr.onerror = function() {
         console.error('La solicitud falló');
     };
-    xhr.send("newScriptContent=", newScript);
+    console.log(newScript);
+    xhr.send("newScriptContent=".concat(newScript));
 
     eval(customJS)
 }
