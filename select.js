@@ -15,6 +15,7 @@ class CustomSelect {
       this.select.size(width);
     }
 
+    console.log(options);
     // Agregamos opciones al select
     for (let option of options) {
       this.select.option(option);
