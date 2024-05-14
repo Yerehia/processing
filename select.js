@@ -1,5 +1,5 @@
 class CustomSelect {
-  constructor(x, y, width, options, customClass) {
+  constructor(x, y, width, heigh, options, customClass) {
     // Creamos el select usando p5.js
     this.select = createSelect();
 
@@ -11,8 +11,9 @@ class CustomSelect {
       this.select.style('left', '');
       this.select.style('top', '');
     }
-    if (width != null) {
-      this.select.size(width);
+    
+    if(width != null && height != null) {
+        this.btn.size(width, height);
     }
 
     console.log(options);
