@@ -20,7 +20,8 @@ class CustomCheckbox {
     }
 
     // Aplicamos la clase personalizada
-    this.box.child()[0].addClass(customClass);
+    console.log(this.box.child());
+    this.box.addClass(customClass);
 
     this.box.changed(() => {
       this.box.checked() ? this.box.attribute('checked', 'checked') : this.box.removeAttribute('checked');
