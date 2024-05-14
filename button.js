@@ -1,5 +1,5 @@
 class CustomButton {
-  constructor(x, y, width, height, label, customClass, clickAction) {
+  constructor(x, y, width, height, label, customClass) {
     // Creamos el botón usando p5.js
     this.btn = createButton('');
 
@@ -15,13 +15,6 @@ class CustomButton {
     }
 
     this.btn.addClass(customClass);
-
-    // Asignamos el manejador de eventos de click al botón
-    this.btn.mousePressed(() => {
-      if (clickAction) {
-        clickAction(); // Ejecutamos la función personalizada
-      }
-    });
 
     // Establecemos el contenido del botón (texto o HTML)
     this.setContent(label);
