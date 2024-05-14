@@ -2,7 +2,7 @@ class CustomCheckbox {
   constructor(x, y, width, height, checked, customClass, parentGroupClass) {
     // Creamos el box usando p5.js
     if(checked) {
-      this.box = createCheckbox(true);
+      this.box = createCheckbox(null, true);
     } else {
       this.box = createCheckbox();
     }
