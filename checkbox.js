@@ -1,5 +1,5 @@
 class CustomCheckbox {
-  constructor(id, x, y, width, height, checked, customClass) {
+  constructor(id, x, y, width, height, checked, customClass, parentGroupClass) {
     // Creamos el box usando p5.js
     if(checked) {
       this.box = createCheckbox(null, true);
