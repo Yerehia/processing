@@ -1,7 +1,8 @@
 class CustomDiv {
-  constructor(x, y, width, height, customClass, parent) {
+  constructor(id, x, y, width, height, customClass, parent) {
     // Creamos un div usando p5.js
     this.div = createDiv('');
+    this.div.id(id);
     if(parent != null) {
         this.div.parent(parent);
 
