@@ -30,5 +30,4 @@ class CustomLabel {
     this.lbl.removeClass();
     this.lbl.addClass(customClass);
   }
-
 }
