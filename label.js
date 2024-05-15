@@ -1,7 +1,8 @@
 class CustomLabel {
-  constructor(x, y, width, height, text, reference, customClass) {
+  constructor(id, x, y, width, height, text, reference, customClass) {
     // Creamos el lbl usando p5.js
-    this.lbl = createElement('label', text);
+    this.lbl = = createElement('label', text);
+    this.lbl.id(id);
 
     // Establecemos la posición y el tamaño del lbl
     if (x != null && y != null) {
