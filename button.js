@@ -1,7 +1,8 @@
 class CustomButton {
-  constructor(x, y, width, height, label, customClass) {
+  constructor(id, x, y, width, height, label, customClass) {
     // Creamos el botón usando p5.js
     this.btn = createButton('');
+    this.btn.id(id);
 
     if(x != null && y != null) {
         this.btn.position(x, y);
