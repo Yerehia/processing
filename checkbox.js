@@ -27,13 +27,17 @@ class CustomCheckbox {
     if(parentGroupClass != null) {
       this.box.addClass(parentGroupClass);
     }
-    
+
     if(labelClass != null && label != null) {
       this.box.child()[1].classList.add(labelClass);
     }
-    
+
     if(customClass != null) {
       this.box.child()[0].classList.add(customClass);
+
+      if(parentGroupClass == null) {
+        this.box.attribute('aria-label', "...")
+      }
     }
 
     this.box.changed(() => {
