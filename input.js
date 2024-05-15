@@ -1,7 +1,8 @@
 class CustomInput {
-  constructor(x, y, width, height, placeholder, customClass) {
+  constructor(id, x, y, width, height, placeholder, customClass) {
     // Creamos el inp usando p5.js
     this.inp = createInput();
+    this.inp.id(id);
 
     // Establecemos la posición y el tamaño del inp
     if (x != null && y != null) {
