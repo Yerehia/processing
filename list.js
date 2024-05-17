@@ -25,9 +25,7 @@ class CustomList {
   }
 
   addItem(item) {
-    items.forEach(item => {
-      let li = createElement('li', item);
-      this.lst.child(li);
-    });
+    let li = createElement('li', item);
+    this.lst.child(li);
   }
 }
