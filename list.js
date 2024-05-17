@@ -20,11 +20,11 @@ class CustomList {
 
     // Añadimos los elementos de la lsta
     items.forEach(item => {
-      this.addItem(item);
+      this.addItem(item, itemsClass);
     });
   }
 
-  addItem(item) {
+  addItem(item, itemsClass) {
     let li = createElement('li', item);
     if(itemsClass != null) {
       li.addClass(itemsClass)
