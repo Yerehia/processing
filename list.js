@@ -1,5 +1,5 @@
 class CustomList {
-  constructor(id, x, y, items, customClass) {
+  constructor(id, x, y, items, customClass, itemsClass) {
     // Creamos el elemento <ul> usando p5.js
     this.lst = createElement('ul');
 
@@ -26,6 +26,9 @@ class CustomList {
 
   addItem(item) {
     let li = createElement('li', item);
+    if(itemsClass != null) {
+      li.addClass(itemsClass)
+    }
     this.lst.child(li);
   }
 }
