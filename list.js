@@ -20,7 +20,7 @@ class CustomList {
 
     // Añadimos los elementos de la lsta
     items.forEach(item => {
-      addItem(item);
+      this.addItem(item);
     });
   }
 
