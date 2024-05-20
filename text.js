@@ -1,7 +1,7 @@
 class CustomText {
   constructor(id, x, y, text, href, target, customClass) {
     // Si href no está definido, creamos un txto de texto simple en lugar de un enlace <a>
-    if (typeof href == null) {
+    if (href == null) {
       this.txt = createP(text);
     } else {
       // Creamos el txto <a> usando p5.js
