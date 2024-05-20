@@ -18,16 +18,23 @@ class CustomList {
     // Establecemos la clase personalizada
     this.lst.addClass(customClass);
 
-    // Añadimos los elementos de la lsta
+    // Añadimos los elementos de la lista
     items.forEach(item => {
       this.addItem(item, itemsClass);
     });
   }
 
   addItem(item, itemsClass) {
-    let li = createElement('li', item);
-    if(itemsClass != null) {
-      li.addClass(itemsClass)
+    let li = createElement('li');
+    if (item.link) {
+      let a = createA(item.link, item.text);
+      li.child(a);
+    } else {
+      li.html(item.text);
+    }
+
+    if (itemsClass != null) {
+      li.addClass(itemsClass);
     }
     this.lst.child(li);
   }
