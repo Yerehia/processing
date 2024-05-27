@@ -22,7 +22,7 @@ class RestHandler {
   static getRequest(url, callback) {
     fetch(url)
       .then(response => response.json())
-      .then(data => callback(null, data));
+      .then(data => callback(null, data))
       .catch(error => callback(error, null));
   }
 
