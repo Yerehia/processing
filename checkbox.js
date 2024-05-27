@@ -10,6 +10,7 @@ class CustomCheckbox {
     } else {
       this.box = createCheckbox();
     }
+    
     this.box.id(id);
 
     // Establecemos la posición y el tamaño del box
