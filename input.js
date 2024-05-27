@@ -13,7 +13,7 @@ class CustomInput {
       this.inp.style('top', '');
     }
     if(width != null && height != null) {
-        this.btn.size(width, height);
+        this.inp.size(width, height);
     }
 
     // Establecemos el placeholder del inp
