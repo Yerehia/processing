@@ -13,7 +13,7 @@ class CustomLabel {
       this.lbl.style('top', '');
     }
     if(width != null && height != null) {
-        this.btn.size(width, height);
+        this.lbl.size(width, height);
     }
 
     // Establecemos el placeholder del lbl
