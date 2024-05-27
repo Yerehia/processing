@@ -1,5 +1,5 @@
 class CustomInput {
-  constructor(id, x, y, width, height, placeholder, customClass) {
+  constructor(id, x, y, width, height, placeholder, name, value, type, customClass) {
     // Creamos el inp usando p5.js
     this.inp = createInput();
     this.inp.id(id);
@@ -19,6 +19,21 @@ class CustomInput {
     // Establecemos el placeholder del inp
     if (placeholder != null) {
       this.inp.attribute('placeholder', placeholder);
+    }
+
+    // Establecemos el name del inp
+    if (name != null) {
+      this.inp.attribute('name', name);
+    }
+
+    // Establecemos el value del inp
+    if (value != null) {
+      this.inp.attribute('value', value);
+    }
+
+    // Establecemos un type al input. Por defecto es text.
+    if (type != null) {
+      this.inp.attribute('type', type);
     }
 
     // Aplicamos la clase personalizada
