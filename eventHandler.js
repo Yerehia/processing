@@ -18,6 +18,12 @@ function assignEvent(p5Element, eventType, eventFunction) {
         case 'MOUSE_RELEASED':
             p5Element.mouseReleased(() => { eventFunction(); });
             break;
+        case 'MOUSE_OVER':
+            p5Element.mouseOver(() => { eventFunction(); });
+            break;
+        case 'MOUSE_OUT':
+            p5Element.mouseOut(() => { eventFunction(); });
+            break;
         case 'SCROLLED':
             p5Element.mouseWheel(() => { eventFunction(); });
             break;
