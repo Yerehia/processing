@@ -53,10 +53,13 @@ class CustomDiv {
         element.remove();
         return;
     }
-    
-    const children = element.child();
-    for (let i = 0; i < children.length; i++) {
-        removeElementByClass(children[i], classNameToRemove);
+
+    if(element.child) {
+      const children = element.child();
+      for (let i = 0; i < children.length; i++) {
+          this.removeElementByClass(children[i], classNameToRemove);
+      }
     }
+
   }
 }
