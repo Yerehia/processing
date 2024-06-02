@@ -43,4 +43,16 @@ class CustomDiv {
       this.div.child(content);
       content.parent(this.div)
   }
+
+  removeElementByClass(element, classNameToRemove) {
+    if (element.classList.contains(classNameToRemove)) {
+        element.remove();
+        return;
+    }
+    
+    const children = element.children;
+    for (let i = 0; i < children.length; i++) {
+        removeElementByClass(children[i], classNameToRemove);
+    }
+  }
 }
