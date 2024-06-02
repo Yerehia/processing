@@ -50,7 +50,7 @@ class CustomDiv {
         return;
     }
     
-    const children = element.children;
+    const children = element.child();
     for (let i = 0; i < children.length; i++) {
         removeElementByClass(children[i], classNameToRemove);
     }
