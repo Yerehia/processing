@@ -45,7 +45,11 @@ class CustomDiv {
   }
 
   removeElementByClass(element, classNameToRemove) {
-    if (element.hasClass(classNameToRemove)) {
+    if (element.hasClass && element.hasClass(classNameToRemove)) {
+        element.remove();
+        return;
+    }
+    if (element.classList && element.classList.contains(classNameToRemove)) {
         element.remove();
         return;
     }
