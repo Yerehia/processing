@@ -43,7 +43,7 @@ class CustomText {
 
   setFontFamily(family) {
     if(family != null) {
-      this.text.style('font-family', family);
+      this.txt.style('font-family', family);
     }
   }
 }
