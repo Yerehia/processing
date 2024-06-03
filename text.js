@@ -41,12 +41,9 @@ class CustomText {
     }
   }
 
-  setStyle(family, size) {
+  setFontFamily(family) {
     if(family != null) {
       this.text.style('font-family', family);
-    }
-    if(size != null) {
-      this.text.style('font-size', size);
     }
   }
 }
