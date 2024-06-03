@@ -40,4 +40,13 @@ class CustomText {
       this.txt.child(content);
     }
   }
+
+  setStyle(family, size) {
+    if(family != null) {
+      this.text.style('font-family', family);
+    }
+    if(size != null) {
+      this.text.style('font-size', size);
+    }
+  }
 }
