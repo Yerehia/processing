@@ -1,5 +1,5 @@
 class CustomCheckbox {
-  constructor(id, x, y, width, height, label, checked, customClass, labelClass, parentGroupClass) {
+  constructor(id, x, y, width, height, name, label, checked, customClass, labelClass, parentGroupClass) {
     // Creamos el box usando p5.js
     if(checked && label != null) {
       this.box = createCheckbox(label, true);
@@ -23,6 +23,10 @@ class CustomCheckbox {
     }
     if (width != null && height != null) {
       this.box.size(width, height);
+    }
+
+    if (name != null) {
+      this.stc.attribute('name', name);
     }
 
     if(parentGroupClass != null) {
