@@ -1,5 +1,5 @@
 class CustomSelect {
-  constructor(id, x, y, width, heigh, options, customClass) {
+  constructor(id, x, y, width, heigh, name, options, customClass) {
     // Creamos el stc usando p5.js
     this.stc = createSelect();
     this.stc.id(id);
@@ -15,6 +15,10 @@ class CustomSelect {
 
     if(width != null && height != null) {
         this.stc.size(width, height);
+    }
+
+    if (name != null) {
+      this.stc.attribute('name', name);
     }
 
     // Agregamos opciones al stc
