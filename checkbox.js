@@ -26,7 +26,7 @@ class CustomCheckbox {
     }
 
     if (name != null) {
-      this.stc.attribute('name', name);
+      this.box.attribute('name', name);
     }
 
     if(parentGroupClass != null) {
